@@ -260,7 +260,7 @@ const Header = (props) => {
         }}
         disableRipple
       >
-        {/* <MenuIcon /> */}
+        <MenuIcon />
       </IconButton>
     </>
   );
