@@ -130,8 +130,8 @@ const LandingPage = (props) => {
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
   const defaultOptions = {
-    loop: false,
-    autoplay: false,
+    loop: true,
+    autoplay: true,
     animationData: animationData,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",

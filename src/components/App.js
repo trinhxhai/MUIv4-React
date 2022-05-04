@@ -3,6 +3,7 @@ import Header from "./ui/Header";
 import Footer from "./ui/Footer";
 import LandingPage from "./LandingPage";
 import Services from "./Services";
+import CustomSoftware from "./CustomSoftware";
 
 import { ThemeProvider } from "@material-ui/styles";
 import { useState } from "react";
@@ -47,7 +48,12 @@ function App() {
           <Route
             exact
             path="/customsoftware"
-            element={<div>Custom Sofware</div>}
+            element={
+              <CustomSoftware
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            }
           />
           <Route exact path="/mobileapps" element={<div>Mobile Apps</div>} />
           <Route exact path="/websites" element={<div>Website</div>} />
