@@ -1,6 +1,9 @@
 import React from "react";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
+import LandingPage from "./LandingPage";
+import Services from "./Services";
+
 import { ThemeProvider } from "@material-ui/styles";
 import { useState } from "react";
 import theme from "./ui/Theme";
@@ -21,8 +24,26 @@ function App() {
           setSelectedIndex={setSelectedIndex}
         />
         <Routes>
-          <Route exact path="/" element={<div>Home</div>} />
-          <Route exact path="/services" element={<div>Services</div>} />
+          <Route
+            exact
+            path="/"
+            element={
+              <LandingPage
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            }
+          />
+          <Route
+            exact
+            path="/services"
+            element={
+              <Services
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            }
+          />
           <Route
             exact
             path="/customsoftware"

@@ -74,6 +74,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "50px",
     marginRight: "25px",
     height: "45px",
+    "&:hover": {
+      backgroundColor: theme.palette.secondary.light,
+    },
   },
   menu: {
     backgroundColor: theme.palette.common.blue,
@@ -127,7 +130,7 @@ const menuItems = [
     selectedIndex: 1,
   },
   {
-    name: "Mobile Apps Development",
+    name: "iOS/Android Apps Development",
     link: "/mobileapps",
     activeIndex: 1,
     selectedIndex: 2,
@@ -167,6 +170,7 @@ const Header = (props) => {
     { name: "Revolution", link: "/revolution", activeIndex: 2 },
     { name: "About us", link: "/about", activeIndex: 3 },
     { name: "Contact us", link: "/contact", activeIndex: 4 },
+    { name: "", link: "/estimate", activeIndex: 5 },
   ];
 
   const handleChange = (e, newValue) => {
@@ -234,7 +238,16 @@ const Header = (props) => {
           );
         })}
       </Tabs>
-      <Button variant="contained" color="secondary" className={classes.button}>
+      <Button
+        component={Link}
+        to="/estimate"
+        variant="contained"
+        color="secondary"
+        className={classes.button}
+        onClick={() => {
+          props.setValue(5);
+        }}
+      >
         Free Estimate
       </Button>
 
